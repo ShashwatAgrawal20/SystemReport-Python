@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin: 0;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>System Report</h1>
+        <h2>Generated on: 2023-09-24 15:54:15</h2>
+
+        <h3>System Information</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Key</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>OS</td>
+                    <td>Linux</td>
+                </tr>
+                
+                <tr>
+                    <td>Architecture</td>
+                    <td>x86_64</td>
+                </tr>
+                
+                <tr>
+                    <td>CPU</td>
+                    <td>Intel(R) Core(TM) i3-2100 CPU @ 3.10GHz (4 cores)</td>
+                </tr>
+                
+                <tr>
+                    <td>Memory</td>
+                    <td>6 GB</td>
+                </tr>
+                
+                <tr>
+                    <td>CPU Usage</td>
+                    <td>5.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>Memory Usage</td>
+                    <td>23.1%</td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <h3>Disk Information</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mount Point</th>
+                    <th>Total Disk Space</th>
+                    <th>Used Disk Space</th>
+                    <th>Free Disk Space</th>
+                    <th>Disk Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>/</td>
+                    <td>78 GB</td>
+                    <td>15 GB</td>
+                    <td>59 GB</td>
+                    <td>20.3%</td>
+                </tr>
+                
+                <tr>
+                    <td>/boot/efi</td>
+                    <td>0 GB</td>
+                    <td>0 GB</td>
+                    <td>0 GB</td>
+                    <td>0.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>/home</td>
+                    <td>379 GB</td>
+                    <td>26 GB</td>
+                    <td>333 GB</td>
+                    <td>7.3%</td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <h3>Top CPU Processes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>PID</th>
+                    <th>CPU Percent</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>systemd</td>
+                    <td>1</td>
+                    <td>0.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>kthreadd</td>
+                    <td>2</td>
+                    <td>0.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>rcu_gp</td>
+                    <td>3</td>
+                    <td>0.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>rcu_par_gp</td>
+                    <td>4</td>
+                    <td>0.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>slub_flushwq</td>
+                    <td>5</td>
+                    <td>0.0%</td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <h3>Top Memory Processes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>PID</th>
+                    <th>Memory Percent</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>firefox</td>
+                    <td>3141</td>
+                    <td>7.412774526409335%</td>
+                </tr>
+                
+                <tr>
+                    <td>Isolated Web Co</td>
+                    <td>3393</td>
+                    <td>3.8896179417490218%</td>
+                </tr>
+                
+                <tr>
+                    <td>WebExtensions</td>
+                    <td>3259</td>
+                    <td>2.7296982965040706%</td>
+                </tr>
+                
+                <tr>
+                    <td>Privileged Cont</td>
+                    <td>3212</td>
+                    <td>2.08882282495199%</td>
+                </tr>
+                
+                <tr>
+                    <td>kitty</td>
+                    <td>953</td>
+                    <td>2.03512860008721%</td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <h3>User Information</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Terminal</th>
+                    <th>Login Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>shashwat</td>
+                    <td>tty2</td>
+                    <td>2023-09-24 15:24:34</td>
+                </tr>
+                
+                <tr>
+                    <td>shashwat</td>
+                    <td>pts/1</td>
+                    <td>2023-09-24 15:27:43</td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <h3>Network Information</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Interface</th>
+                    <th>IP Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>lo</td>
+                    <td>127.0.0.1</td>
+                </tr>
+                
+                <tr>
+                    <td>wlp0s29u1u2</td>
+                    <td>192.168.11.254</td>
+                </tr>
+                
+                <tr>
+                    <td>enp4s0</td>
+                    <td></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

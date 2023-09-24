@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin: 0;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>System Report</h1>
+        <h2>Generated on: {{ report_date }}</h2>
+
+        <h3>System Information</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Key</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for key, value in system_info.items() %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ value }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h3>Disk Information</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mount Point</th>
+                    <th>Total Disk Space</th>
+                    <th>Used Disk Space</th>
+                    <th>Free Disk Space</th>
+                    <th>Disk Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for disk in disk_info %}
+                <tr>
+                    <td>{{ disk['Mount Point'] }}</td>
+                    <td>{{ disk['Total Disk Space'] }}</td>
+                    <td>{{ disk['Used Disk Space'] }}</td>
+                    <td>{{ disk['Free Disk Space'] }}</td>
+                    <td>{{ disk['Disk Usage'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h3>Top CPU Processes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>PID</th>
+                    <th>CPU Percent</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for process in top_cpu_processes %}
+                <tr>
+                    <td>{{ process['name'] }}</td>
+                    <td>{{ process['pid'] }}</td>
+                    <td>{{ process['cpu_percent'] }}%</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h3>Top Memory Processes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>PID</th>
+                    <th>Memory Percent</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for process in top_memory_processes %}
+                <tr>
+                    <td>{{ process['name'] }}</td>
+                    <td>{{ process['pid'] }}</td>
+                    <td>{{ process['memory_percent'] }}%</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h3>User Information</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Terminal</th>
+                    <th>Login Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in user_info %}
+                <tr>
+                    <td>{{ user['User'] }}</td>
+                    <td>{{ user['Terminal'] }}</td>
+                    <td>{{ user['Login Time'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h3>Network Information</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Interface</th>
+                    <th>IP Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for interface, ips in network_data.items() %}
+                <tr>
+                    <td>{{ interface }}</td>
+                    <td>{{ ips|join(', ') }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
